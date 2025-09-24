@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+
+int sumOfPowers(int n) {
+    if (n == 0)   
+        return 1; // 2^0 = 1
+    else
+        return (int)pow(2, n) + sumOfPowers(n - 1); 
+}
+
+int main() {
+    int n;
+    printf("Enter value of n: ");
+    scanf("%d", &n);
+
+    printf("Sum = %d\n", sumOfPowers(n));
+    return 0;
+}
